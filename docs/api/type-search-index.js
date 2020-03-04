@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"edu.cnm.deepdive","l":"Algorithms"},{"l":"All Classes","url":"allclasses-index.html"}]
