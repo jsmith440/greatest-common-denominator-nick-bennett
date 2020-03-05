@@ -25,7 +25,27 @@ public class Algorithms {
    * @throws IllegalArgumentException if {@code a} and {@code b} are both zero.
    */
   public static long gcd(long a, long b) throws IllegalArgumentException {
-    return 0; // TODO Replace with implementation as described above and in README.
+    long divisor = 0;
+    if (a == 0 && b == 0) {
+      throw new IllegalArgumentException();
+    }
+    a = Math.abs(a);
+    b = Math.abs(b);
+    if (a == 0) {
+      divisor = b;
+    } else if (b == 0) {
+      divisor = a;
+    } else {
+      while (a != 0) {
+        if (a >= b) {
+          a -= b;
+        } else {
+          b -= a;
+        }
+      }
+      divisor = b;
+    }
+    return divisor;
   }
 
 
